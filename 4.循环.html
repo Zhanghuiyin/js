@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      for(var i=1;i<10;i++){}
+      //for循环括号里面有三条语句，第一条是声明变量，第二条是条件语句 布尔值，第三条运算；
+
+       var j = 0;
+       j = j+1;
+       // i++的含义：
+
+       var a = j++;
+       console.log(a);//控制台显示：0
+       var a = ++j;
+       console.log(a);//控制台显示：1
+       //j++是先赋值后运算，++j是先运算后赋值（面试常考）
+       
+    
+       for(var i=1;i<10;i++){
+         console.log(i);
+       }
+       //这是一个最基础的循环，控制台显示：123456789
+       
+       var j = 0;
+       while(j<10){
+         console.log(j);
+         j++;
+       }
+       //while 循环的用法：外面声明变量，括号里面一条条件语句，花括号里面写运算；
+
+       var j = 0;
+       do{
+        console.log(j);
+         j++;
+         }while(j<10)
+       // do while 循环的用法：外面声明变量，do后面花括号，while后面都括号还是写条件语句；
+       //while 和 do while的区别：
+       //如果j的值改成11，while不会执行， do while会执行，输出11  
+       //while是先判断后执行，do while是先执行，至少执行一次，再判断；      
+    
+    
+    </script>
+</body>
+</html>
+本节讲了三种循环：
+1.for (){}
+2.while (){}
+3.do{
+ 
+} while()
+（特殊记一下do while的书写格式）
