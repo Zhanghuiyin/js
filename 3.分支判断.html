@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var a = 1;
+    console.log(typeof a);
+    if(typeof a == "number"){
+    console.log("这是一个数值型");
+    }
+    if(typeof a == "string"){
+      console.log("这是一个字符型");
+    }
+    //if 条件语句  格式if(){} if括号里面写的是布尔值（要写两个等号，不可以写一个等号，一个等号是赋值，两个才是判断）
+    
+    var a = 1;
+    if(typeof a == "number"){
+    console.log("这是一个数值型");
+    }else{
+      console.log("这是一个字符型");
+    }
+    // 两种判断（ if else ）如果想写不是数值型就是字符型，就这么写if else ,else后面没有条件语句（没用括号，直接跟花括号）
+ 
+    var a = 1;
+    if(typeof a == "number"){
+      console.log("这是一个数值型");
+    }else if(typeof a == "string"){
+      console.log("这是一个字符型");
+    }else{
+      console.log("这是布尔型");
+    }
+    // 三种以上判断else if(){} 多路分支
+
+
+    var a = true;
+    if(0){ 
+      console.log("come");
+    }
+    //此时控制台为空，0代表假，false,其他数字代表真,所以也算布尔值；
+
+    var a = true;
+    if(111){ 
+      console.log("come");
+    }
+    //此时控制台为：come
+
+
+    var a = 1;
+    if(""){ 
+      console.log("come");
+    }
+     //此时控制台为空,"" 空字符 串也代表假 
+
+    var test;
+    console.log(test);
+    // 定义一个变量，但是没赋值，这个时候控制台会输出：undefined
+    
+    var test; 
+    if(test){
+      console.log("come");
+    }
+    // 判断一下undefined，控制台无显示，所以undefined也是假；
+
+    var test;  
+    var str = test ? "可用" : "不可用";
+    console.log(str);
+    //?:三目运算符  ?前面是一个表达式，相当于if括号里的内容,冒号前面是真的时候引用的，后面是假的
+    //三目运算符的好处是简化代码
+    //以上控制台显示不可用，因为undefined是假
+
+    var test = "a";  
+    var str = test ? "可用" : "不可用";
+    console.log(str);
+    //控制台显示可用
+
+    var str = "c";
+    switch(str){
+      case "a":console.log("这是a");break;
+      case "b":console.log("这是b");break;
+      case "c":console.log("这是c");break;
+      case "d":console.log("这是d");break;
+      case "e":console.log("这是e");break;
+      case "f":console.log("这是f");break;
+      default:console.log("没有")  // default 执行其他情况的代码
+    }
+    // switch : 也可以实现多路分支
+    
+   
+    if(1=="1"){
+      console.log("ok");
+    }  
+    // 这个时候控制台也会显示ok , 因为系统自动把字符型的数字转换为数值型   
+    if(1==="1"){
+      console.log("ok");
+    }
+    //这个时候不显示OK，因为三个＝表示恒等完全相等，数据类型不一样也不可以
+    // 这就是两个等号和三个等号的区别
+
+       
+  </script>
+</body>
+</html>
+总结本节
+1.单一选择结构if
+2.二路选择结构：if else elseif
+3.内联三目运算符 ？：(比较常见，简化代码)
+4.多路选择结构 switch
+
