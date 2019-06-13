@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="bd"  mysrc = "http://www.baidu.com">百度</div>
+    
+    <script>
+        var obd = document.getElementById("bd");
+        obd.onclick = function (){
+            var src = obd.getAttribute("mysrc"); // 获取对象属性
+            location.replace(src);
+        }
+    </script>
+    
+</body>
+</html>
+<!-- 以上是实现，点击百度，实现页面跳转 -->
+
+ 第二种方法( data-定义并通过对象获取)：以后自定义属性的时候都用data-url(横线后面这个是自己起的名字)
+ <div id="bd"  data-url = "http://www.baidu.com">百度</div>
+ <script>
+        var obd = document.getElementById("bd");
+        obd.onclick = function (e){
+            var src = e.target.dataset.url  //通过事件对象e获取
+            location.replace(src);    
+        }
+    </script>
+
+第三种方法(data－定义并通过this获取）
+<div id="bd"  data-url = "http://www.baidu.com">百度</div>
+ <script>
+        var obd = document.getElementById("bd");
+        obd.onclick = function (){
+            var src = this.getAttribute("data-url");
+            location.replace(src);    
+        }
+    </script>
+   <!-- this恒等于这个触发事件源：obd -->
