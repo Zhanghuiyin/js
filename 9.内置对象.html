@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var num = 10;
+       console.log(10+"");
+       //把var num = 10这个数值型转换为字符串的方式  console.log(10+"")后面加一个空字符串；
+
+       var num = 10;
+       console.log(num.toString());
+       //把var num = 10这个数值型转换为字符串的方式 ：内置对象 
+       //toString: 把数字转换为字符串，使用指定的基数；
+
+
+
+       var num = 10.23456;
+       console.log(num.toFixed(2));
+       //toFixed 把数字转换为字符串，结果的小数点后有指定位的数字；
+      //toFixed 后面括号里面的数字代表保留几位小数，这个例子输出会显示 10.23（两位小数）；
+
+      var str = "hello world!";
+      console.log(str.indexOf("e"));// 控制台输出：1
+      //indexOf：检索 检索这个变量里e在第几位；当没有里面的值时，返回值为－1；
+
+      var str = "hello world!";
+      console.log(str[1]);//控制台输出：e （由此看出，其实这也可以看成是一个数组）
+      
+      var str = "hello world!";
+      console.log(str.charAt(1));// 控制台输出e
+      //charAt（）方法可返回指定位置的字符；这个例子后面括号是1，代表第一个字母e;
+
+      var str = "hello world!";
+      console.log(str.substring(6,11)); //控制台输出world 
+      //substring 截取字符串 substring（start stop)start是必填，截取的字符包括start,不包括stop；
+
+     var str = "hello world!"
+     console.log(str.substr(3,4));
+     //和上面区分，前面的数子代表从第几个字符开始截取，后面的数字代表截取长度
+     
+
+
+      var str = '一，二，三，四';
+      console.log(str.split(","));// 控制台输出一个数组array(一，二，三，四)
+      //split()方法用于把一个字符串分割成字符串数组，后面括号里的逗号代表根据逗号截取放进数组；
+      // 仅适用于字符型
+
+      例题把这个变量的整数和小数分开
+      var num = 2.12121212;
+      console.log(num.toString());//先转换为字符型，因为split这个方法只适用于字符型；
+      console.log(num.split("."));//然后再执行split;
+      //控制台显示［“2”，“1212112”］
+
+     数组内置对象部分
+      var arr = [1,3,4,5];
+      var arr2 = ["a","b","c"];
+      console.log(arr.concat(arr2));//控制台显示一个这两个数组拼接的新数组；
+     // concat()拼接数组
+      
+     var arr = [1,3,4,5];
+     console.log(arr.join("-"));//控制台显示：1-3-4-5
+     //join()方法用于把数组中的所有元素放入一个字符串，元素通过指定的分隔符进行分隔（和split)正好相反；
+
+     var arr = [1,3,4,5];
+     console.log(arr.push(6));//控制台显示：5（意思是数组长度）
+
+     var arr = [1,3,4,5];
+     arr.push(6);
+     console.log(arr);//控制台显示：数组13456；
+      //push添加新数组，返回新的数组长度；
+
+      var arr = [1,3,4,5];
+      console.log(arr.pop());//控制台显示：5（数字5）
+      //pop（）用于删除并返回最后一个值
+      //shift()用于删除并返回第一个值
+
+      var arr = [1,3,4,5];
+      arr.pop();
+      console.log(arr);// 控制台显示数组134；
+
+      var arr = [1,3,4,5];
+      console.log(arr.reverse());//控制台显示［5，4，3，1］
+      //reverse 倒序
+
+
+      var arr = [1,2,3,4.6];
+      arr.splice(2,1,"a");
+      console.log(arr)
+      // splice()里面三个参数，第一个参数代表从第几个元素开始删除；第二个代表删除几个，0代表不删除，最后一个参数是删除后的替换项或者添加项
+      // splice() 方法向/从数组中添加/删除项目，然后返回被删除的项目。
+      //  控制台显示数组［1，2,“a”，4，6］
+
+      var arr = [1,2,3,4.6];
+      console.log(arr.splice(2,1,"a"));
+      //控制台显示数字3，因为返回被删除项；
+
+
+      var arr = [1,3,4,5];
+      console.log(arr.slice(2,4));
+      // slice( start,stop) 方法可从已有的数组中返回选定的元素(类似 substring)
+      // 返回一个新的数组，包含从 start 到 end （不包括该元素）的 arrayObject 中的元素。
+      
+
+
+      var arr = ["c","a","b"];
+      console.log(arr.sort());//控制台显示：abc的顺序（根据默认的排序）
+      //sort()数组元素排序；（字母篇）
+
+      var arr = [1,3,16,5];
+      console.log(arr.sort());// 控制台会显示：1，16，3，5（根据首位大小排的）
+      //sort()数组元素排序；（数字篇）
+
+// 如果调用该方法时没有使用参数，将按字母顺序对数组中的元素进行排序，说得更精确点，是按照字符编码的顺序进行排序。要实现这一点，首先应把数组的元素都转换成字符串（如有必要），以便进行比较。
+// 如果想按照其他标准进行排序，就需要提供比较函数，该函数要比较两个值，然后返回一个用于说明这两个值的相对顺序的数字。比较函数应该具有两个参数 a 和 b，其返回值如下：
+// 若 a 小于 b，在排序后的数组中 a 应该出现在 b 之前，则返回一个小于 0 的值。
+// 若 a 等于 b，则返回 0。
+// 若 a 大于 b，则返回一个大于 0 的值。
+
+      var arr = [1,3,16,5];
+      arr.sort(function(a,b) {
+        if(a>b){
+          return 1
+        }else if(a<b){
+          return -1
+        }
+        return 0;
+      });
+      console.log(arr);
+    
+
+      
+    </script>
+    
+</body>
+</html>
