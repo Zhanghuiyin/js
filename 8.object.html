@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     定义一个对象   //（一个变量接收了一个花括号）
+      var person = {
+        name:"zs", // 多个属性逗号间隔
+        age:20,
+        eat:function(){
+          console.log("eat");
+        }
+      }
+      // name age 都是变量，eat 后面写函数了，就是方法；（带括号的是方法，不带括号的是属性）
+
+     对象参数的调用修改与添加
+      console.log(person.name);//获取这个人的名字 person.name
+      person.eat() //调用方法
+      person.name = "ls"; //修改名字
+      person.school = "heida";//创建新参数
+
+
+      var obj2 = new object()
+      console.log(obj2);
+      //创建一个对象的时候，可以new,也可以不用new
+
+     
+     
+        
+    </script>
+</body>
+</html>
+基本数据类型：string bool number undefind null这五个
+引用数据类型： object array function
+
+这两种数据类型的区别：
+存储位置不同：基本数据类型存在栈内存里，引用数据类型存在堆内存里；
