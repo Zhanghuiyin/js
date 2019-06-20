@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    定义函数的两种方法
+        function foo(a,b){ //a,b 是 行参
+            var sum = a+b;
+            console.log(sum);
+       }
+       foo(1,2)//调用 
+       // foo 是函数名称，括号里是参数（参数是无限的，写几个都行），花括号里是函数体
+       // 普通函数
+
+         var foo = function(a,b){ 
+             var sum = a+b;
+             console.log(sum);
+       }
+       foo(1,2)
+       //匿名函数（相当于一个变量接收了一个函数）
+       
+    简单举例
+        function foo(a,b){
+            console.log(a*b);  
+        }
+        foo(89,5566);
+        //计算89*5566的一个函数
+
+     
+
+    </script>
+    
+</body>
+</html>
+本节讲了函数：函数是被设计为执行特定任务的代码块，会在某代码调用它时被执行。
+
+1.函数返回 return:
+当 JavaScript 到达 return 语句，函数将停止执行。
+如果函数被某条语句调用，JavaScript 将在调用语句之后“返回”执行代码。
+函数通常会计算出返回值。这个返回值会返回给调用者：
+
+实例
+计算两个数的乘积，并返回结果：
+
+var x = myFunction(4, 3);        // 调用函数，返回值被赋值给 x
+
+function myFunction(a, b) {
+    return a * b;                // 函数返回 a 和 b 的乘积
+}
+
+x 的结果将是：56
+
+2.如果定义一个函数但是没有调用就相当于定义一个变量没有赋值是一样的
+function foo(a,b){  
+    console.log(a,b)   ／／后面的foo*()没有赋值，会输出两个undeifind
+    var sum = a+b;
+    console.log(sum);   //后面的foo*()没有赋值，会输出 NAN
+   }
+foo（）
+3.当把console.log写在外面的时候，里面不写返回值，会显示undeifind
+没有返回值也是相当于var了一个变量但是没有赋值
+一定要写返回值，return  啥都行（都能接收到）
+  function foo(a,b){
+    var sum = a+b;
+}
+console.log(foo(1,2));
+所以应该这么写：
+function foo(a,b){
+    var sum = a+b;
+    return sum 
+}
+console.log(foo(1,2));
+4.调用函数就是函数名（），括号里写具体参数，这个函数名（）写在哪都行，写哪都是调用
+foo()
+5 .function foo(a,b){
+    return a+b;
+}
+var a = foo
+console.log(a)
+foo后面没有（） 运行输出了整个函数体
+6.function foo(a,b)
+    return a+b;
+}
+var a = foo(1,2)
+console.log(a)
+这个foo后面有括号传了参数，调用了函数，所以正常输出3
+7.预定义函数: 比如Math.random() 输出个数人家就给你返回一个随机数，说明里面有 return值，这不是我们自己写的函数，就叫做预定义函数
+自定义函数:我们自己写的 比如funtion foo(){}
+8.但凡看到带括号的就是可执行的，都是函数.比如Math.random
+9.函数定义可以没有函数体（函数体为空）
+但是得写花括号（花括号里面可以为空，空函数）
+10.函数体可以嵌套(闭包)
+function foo(a,b){
+    function sum(i,j){
+        return i+j;
+    }
+    return sum(a,b)
+}
+ console.log(foo(1,2));
+ 
+11.
+ 
+
+
+
+
