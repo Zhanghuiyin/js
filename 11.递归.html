@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      var i = 0;
+      function foo(){
+      console.log(i)
+      i++;
+      foo()
+      }
+      foo()
+      // 控制台显示从012345678.。。。无休止
+
+      var i = 0;
+      function foo(){;
+      console.log(i)
+      i++;
+      if(i<10){
+        foo()
+      }  
+    }
+      foo();
+      //不能无休止，给个条件，小于10 ；
+
+      var i = 0;
+      function foo(){
+      console.log(i)
+      i++;
+      if(i>10){
+         return i
+         }
+        foo();
+      }  
+    
+      foo();
+      //   这么写也是只输出012345678910 return 函数里遇到他，就是后面的东西都不执行了
+
+      
+
+   
+     
+        </script>
+     
+       
+</body>
+</html>
+
+递归(自己调用自己)
