@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       for(var i=0;true;i++){
+      console.log(i);
+       }
+      // 死循环 加载圆圈一直加载，但是控制台不显示
+
+
+      for(var i=0;true;i++){
+      console.log(i);
+      if(i>10){
+        break; //结束所有循环
+      }
+    }
+
+    for(var i=0;i<10;i++){
+      if(i!=6){
+        console.log(i);
+      }
+   }
+   //会输出0123456789，但是没有6(!的意思是不输出6)
+    
+    for(var i=0;i<10;i++){
+      if(i==6){
+        continue; // 结束本次循环，跳出本次循环,直接跳到下一次
+      }
+      console.log(i);
+    }
+    //会输出0123456789，但是没有6(第二种方法)
+    </script>
+</body>
+</html>
+
+ 本节讲了 for 循环的两条特殊语句：
+  1.continue 
+  2.break 
+  3，！的意思
