@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      // 实现对这个数组的深克隆
+      var arr = [1,2,3,['a','b','c'],4];
+      var arr2 = [];
+    // for(var i=0;i<arr.length;i++){
+    //   arr2[i] = arr[i]
+    // }
+    // 这个方法是半深克隆，因为里面嵌套数组了( 改arr里面字母数组的时候，克隆的arr2会跟着变，所以是半深克隆)
+     
+      function jsClone(arr){
+      var arr3 = [];
+      for(var i=0;i<arr.length;i++){
+        if(typeof arr[i] == "object"){
+          arr3[i] = jsClone(arr[i]);
+        }else{
+          arr3[i] = arr[i];
+        }
+      }
+      return arr3;
+    }
+
+    arr2 = jsClone(arr);
+    console.log(arr2);
+
+       // 封装的这个函数的功能就是：给他一个数组，返回给我一个一样的数组 利用了递归的方法
+    
+  
+    </script>
+
+    
+</body>
+</html>
