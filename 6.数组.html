@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    小例子
+    var age = window.prompt("请输入您的年龄！", "18");  
+    var liveSeconds = age * 365 * 24 * 3600;
+    alert("您已经度过了" + liveSeconds + "秒!"); //字符串拼接；
+
+  
+    var age = window.prompt("请输入您的年龄！", "18"); 
+    console.log(age);
+    //window.prompt() 里面两个参数，逗号隔开，第一个参数是文本框名称，第二个参数是默认值；
+    var is = window.confirm("是否取消");
+    console.log(is);
+    //window.confirm() 判断，点击确定，控制台显示ture，点击取消，控制台显示false；
+
+    console.log(Math.random());
+    // Math.random()生成一个随机数;控制台显示个随随机数，每次刷新都会改变；
+
+   数组的两种表示方法
+    var arr = new Array(3,2,1,"11","ture");
+    console.log(arr);
+    //new Array(3);里面只写一个参数，代表这个数组的长度（三个空数组）；
+    //new Array(3,2,1);里面写多个参数，代表默认值；
+
+    var arr = [3,2,1];
+    console.log(arr);
+
+    数组的调用
+    var arr = new Array(3,2,1,"11","ture");
+    console.log(arr[0]);
+    //输出的是3，数组是从第0个开始的；
+
+    数组改值
+    var arr = new Array(3,2,1,"11","ture");
+    arr[0] = "qqqqq";
+    console.log(arr[0]);
+    // 把3 改成了qqqqq，输出为qqqqq；
+
+    数组添加新值的两种方式
+    var arr = new Array(3,2,1,"11","ture");
+    arr[5] = "hello";
+    console.log(arr);
+    // 这种方法必须知道数组的长度
+    var arr = new Array(3,2,1,"11","ture");
+    arr.push("world");
+    console.log(arr);
+    //这种方法无需知道数组长度，push在数组最后面推入一个新的参数
+
+    数组的输出
+    var arr = new Array(3,2,1,"11","ture");
+    for(var i=0;i<arr.length;i++){
+      console.log(arr[i]);
+    }
+
+
+    
+                  
+
+    
+       
+    
+    
+    
+    
+  </script>
+</body>
+
+</html>
+1.var myarray = new Array ;定义一个空数组 输出:[ ] 
+并不输出undeifind 
+定义一个空对象空数组，都不会输出undeifind
+2. var myarray = new Array(5);
+代表定义一个长度为5的空数组 输出：［empty＊5］
+var myarray = new Array(5，6);
+代表正常定义一个数组，里面有5和6
+
+如果数组后面的括号里面是一个数字，那么代表这个数组的长度；
+如果为多个数字，那么就是一个正常的数组
+3.访问数组中的某个元素： arr［］中括号里面代表数组下标前面是数组名
+eg:访问arr数组中的第5个元素  arr[4]  是4，因为数组从0开始
+
