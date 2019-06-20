@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var timer = new Date(); //获取时间必须 new 一下
+        console.log(timer.getFullYear());//获取年份
+        console.log(timer.getMonth()+1); // 获取月份       
+        //月份从0开始，0代表第一个月，所以要保证输出中国正常的年份，加1
+        console.log(timer.getDate()); //获取日期
+        console.log(timer.getDay()+1);//获取星期 星期日是星期0
+
+        
+    </script>
+</body>
+</html>
