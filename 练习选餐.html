@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var people = [];
+        var isLunch = window.confirm("是否吃午餐");
+        if (isLunch) {
+            var num = window.prompt("几个人吃午饭", "");
+            for (var i = 0; i < num; i++) {
+                var who = window.prompt("第" + (i + 1) + "个人叫什么？", "");
+
+                people.push(who)
+            }
+            for (var j = 0; j < num; j++) {
+                var lunch = chooseLunch();
+                alert(people[j] + "吃" + lunch);
+            }
+        } else {
+            alert("不吃！");
+        }
+
+
+        function chooseLunch() {
+            var name = "";
+            var random = Math.random();
+            random *= 10; // random = random *10 相同
+            random = Math.floor(random);
+            switch (random) {
+                case 0: name = "宫保鸡丁"; break;
+                case 1: name = "土豆丝"; break;
+                case 2: name = "香辣肉丝"; break;
+                case 3: name = "锅包肉"; break;
+                case 4: name = "面条"; break;
+                case 5: name = "馒头"; break;
+                case 6: name = "包子"; break;
+                case 7: name = "粥"; break;
+                case 8: name = "凉菜"; break;
+                default: name = "不吃了"
+            }
+            return name;
+        }
+
+    </script>
+
+</body>
+
+</html>
